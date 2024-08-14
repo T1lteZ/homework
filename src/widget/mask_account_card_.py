@@ -12,3 +12,9 @@ def mask_account_card(num_acc_card: str) -> str | None:
         return results
     else:
         return None
+
+
+
+ def get_date(date_: str) -> str | None:
+     result_date = f"{date_[8:10]}.{date_[5:7]}.{date_[0:5]}"
+     return result_date
