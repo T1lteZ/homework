@@ -21,3 +21,16 @@ def numbers_acc():
     return "**4305"
 
 
+@pytest.fixture
+def numbers_acc_card():
+    return "Visa Platinum 7000 79** **** 6361"
+
+
+@pytest.fixture
+def numbers_acc_():
+    return "Счет **4305"
+
+
+@pytest.fixture
+def date_():
+    return "11.03.2024"
