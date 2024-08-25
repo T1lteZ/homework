@@ -108,7 +108,7 @@ def filter_list_trans():
             "from": "Счет 75106830613657916952",
             "to": "Счет 11776614605963066702",
         }
-    assert next(result) == {
+    assert next() == {
             "id": 142264268,
             "state": "EXECUTED",
             "date": "2019-04-04T23:20:05.206878",
@@ -117,7 +117,7 @@ def filter_list_trans():
             "from": "Счет 19708645243227258542",
             "to": "Счет 75651667383060284188",
         }
-    assert next(result) == {
+    assert next() == {
             "id": 895315941,
             "state": "EXECUTED",
             "date": "2018-08-19T04:27:37.904916",

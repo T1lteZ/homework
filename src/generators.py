@@ -23,6 +23,7 @@ def filter_by_currency(transactions: list[dict], currency="USD") -> list[dict]:
 
 usd_transactions = filter_by_currency(transactions, "USD")
 
+
 def transaction_descriptions(transactions: list[dict]) -> str:
     """Функция вывода категории транзакции"""
     if len(transactions) > 0:
