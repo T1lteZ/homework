@@ -13,12 +13,14 @@ def test_log_1():
 
 
 def test_log_2():
-    with pytest.raises(UnboundLocalError, match="cannot access local variable 'result' where it is not associated with a value"):
+    with pytest.raises(UnboundLocalError,
+                       match="cannot access local variable 'result' where it is not associated with a value"):
         my_function()
 
 
 def test_log_3():
-    with pytest.raises(UnboundLocalError, match="cannot access local variable 'result' where it is not associated with a value"):
+    with pytest.raises(UnboundLocalError,
+                       match="cannot access local variable 'result' where it is not associated with a value"):
         my_function(1, "2")
 
 

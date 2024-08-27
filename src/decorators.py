@@ -10,9 +10,9 @@ def log(filename):
                 result = func(*args, **kwargs)
                 if filename:
                     with open(filename, "a", encoding="utf-8") as file:
-                        file.write(f"my_function ok\n")
+                        file.write("my_function ok\n")
                 else:
-                    print(f"my_function ok\n")
+                    print("my_function ok\n")
             except Exception as e:
                 if filename:
                     with open(filename, "a", encoding="utf-8") as file:
@@ -28,5 +28,6 @@ def log(filename):
 def my_function(x, y):
     """Функция складывания двух чисел"""
     return x + y
+
 
 my_function(1, 0)
