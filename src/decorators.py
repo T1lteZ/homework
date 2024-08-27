@@ -29,4 +29,4 @@ def my_function(x, y):
     """Функция складывания двух чисел"""
     return x + y
 
-my_function(1, 2)
+my_function(1, 0)
