@@ -2,7 +2,7 @@ import json
 from json import JSONDecodeError
 from typing import Any
 
-from src.external_api import currency_conversion
+from src.external_api import conversion_api
 
 
 def operation_list(path: str) -> list:
@@ -25,5 +25,5 @@ def sum_operation_on_rub(trans: dict, currency: str = "RUB") -> Any:
     if trans["operationAmount"]["currency"]["code"] == currency:
         amount = trans["operationAmount"]["amount"]
     else:
-        amount = currency_conversion(trans)
+        amount = conversion_api(trans)
     return amount
