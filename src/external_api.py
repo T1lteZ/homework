@@ -7,7 +7,7 @@ load_dotenv()
 values = os.getenv("API_KEY")
 
 
-def currency_conversion(transaction: Any) -> Any:
+def conversion_api(transaction: Any) -> Any:
     """Функция конвертации"""
     amount = transaction["operationAmount"]["amount"]
     code = transaction["operationAmount"]["currency"]["code"]

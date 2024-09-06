@@ -1,4 +1,5 @@
 import pytest
+import os
 
 
 @pytest.fixture
@@ -132,3 +133,72 @@ def filter_list_trans():
 @pytest.fixture
 def zero_trans():
     return ""
+
+@pytest.fixture
+def path():
+    PATH_TO_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "operations.json")
+    return PATH_TO_FILE
+
+
+@pytest.fixture
+def path_empty_list():
+    PATH_TO_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "operation_none.json")
+    return PATH_TO_FILE
+
+
+@pytest.fixture
+def path_mistake_json():
+    PATH_TO_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "operations_mis.json")
+    return PATH_TO_FILE
+
+
+@pytest.fixture
+def trans():
+    return {
+        "id": 441945886,
+        "state": "EXECUTED",
+        "date": "2019-08-26T10:50:58.294041",
+        "operationAmount": {
+         "amount": "31957.58",
+         "currency": {
+          "name": "руб.",
+          "code": "RUB"}
+        },
+        "description": "Перевод организации",
+        "from": "Maestro 1596837868705199",
+        "to": "Счет 64686473678894779589"}
+
+
+@pytest.fixture
+def trans_1():
+    return {
+        "id": 441945886,
+        "state": "EXECUTED",
+        "date": "2019-08-26T10:50:58.294041",
+        "operationAmount": {
+            "amount": "31957.58",
+            "currency": {
+                "name": "руб.",
+                "code": "USD"}
+        },
+        "description": "Перевод организации",
+        "from": "Maestro 1596837868705199",
+        "to": "Счет 64686473678894779589"}
+
+
+@pytest.fixture
+def transaction_t():
+    return {
+        "id": 441945886,
+        "state": "EXECUTED",
+        "date": "2019-08-26T10:50:58.294041",
+        "operationAmount": {
+            "amount": "31957.58",
+            "currency": {
+                "name": "руб.",
+                "code": "USD"}
+        },
+        "description": "Перевод организации",
+        "from": "Maestro 1596837868705199",
+        "to": "Счет 64686473678894779589"
+    }
