@@ -134,6 +134,7 @@ def filter_list_trans():
 def zero_trans():
     return ""
 
+
 @pytest.fixture
 def path():
     PATH_TO_FILE = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "operations.json")

@@ -33,4 +33,5 @@ def conversion_api(transaction: Any) -> Any:
     result = response.json()
     return result["result"]
 
+
 print(type(conversion_api(transaction)))
