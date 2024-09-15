@@ -1,7 +1,5 @@
 from unittest.mock import patch
 
-import requests
-
 from src.external_api import conversion_api
 
 

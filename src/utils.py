@@ -1,11 +1,10 @@
 import json
-from json import JSONDecodeError
-from typing import Any
 import logging
 import os
+from json import JSONDecodeError
+from typing import Any
 
 from src.external_api import conversion_api
-
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 

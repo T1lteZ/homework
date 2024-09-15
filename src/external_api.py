@@ -1,8 +1,8 @@
-from dotenv import load_dotenv
 import os
 from typing import Any
-import requests
 
+import requests
+from dotenv import load_dotenv
 
 load_dotenv()
 values = os.getenv("API_KEY")
@@ -32,5 +32,6 @@ def conversion_api(transaction: Any) -> Any:
     response = requests.get(url, headers={"apikey": values}, data=payload)
     result = response.json()
     return result["result"]
+
 
 print(type(conversion_api(transaction)))

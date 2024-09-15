@@ -1,7 +1,3 @@
-import os
-from unittest.mock import patch
-import pytest
-
 from src.utils import operation_list, sum_operation_on_rub
 
 

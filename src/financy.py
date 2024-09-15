@@ -1,9 +1,9 @@
 import csv
-from typing import Any
 import logging
-import pandas as pd
 import os
+from typing import Any
 
+import pandas as pd
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
 
@@ -37,7 +37,7 @@ def csv_reader_func(path) -> Any:
         return []
 
 
-#print(csv_reader_func("C:/Users/stasf/PycharmProjects/homework/financy.csv"))
+print(csv_reader_func("C:/Users/stasf/PycharmProjects/homework/financy.csv"))
 
 
 def xlsx_reader_func(path) -> Any:
