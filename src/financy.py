@@ -25,8 +25,8 @@ logger.addHandler(file_handler)
 def csv_reader_func(path) -> Any:
     """Функция чтения CSV"""
     try:
-        with open("financy.csv") as file:
-            logger.info("Чтение файла")
+        with open(path) as file:
+            logger.info("Файл найден")
             transaction_list = []
             reader = csv.DictReader(file, delimiter=";")
             for row in reader:
@@ -34,20 +34,22 @@ def csv_reader_func(path) -> Any:
             return transaction_list
     except FileNotFoundError:
         logger.info("Файл не найден")
+        return []
 
 
-print(csv_reader_func("C:/Users/stasf/PycharmProjects/homework/financy.csv"))
+#print(csv_reader_func("C:/Users/stasf/PycharmProjects/homework/financy.csv"))
 
 
 def xlsx_reader_func(path) -> Any:
     """Функция чтения excel"""
     try:
-        logger.info("Чтение файла")
+        logger.info("Файл найден")
         reader = pd.read_excel(path)
         dict_excel = reader.to_dict(orient="records")
         return dict_excel
     except FileNotFoundError:
         logger.info("Файл не найден")
+        return []
 
 
 print(xlsx_reader_func("C:/Users/stasf/PycharmProjects/homework/transactions_excel.xlsx"))

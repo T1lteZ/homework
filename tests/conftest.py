@@ -1,3 +1,4 @@
+import pandas as pd
 import pytest
 import os
 
@@ -202,3 +203,13 @@ def transaction_t():
         "from": "Maestro 1596837868705199",
         "to": "Счет 64686473678894779589"
     }
+
+
+@pytest.fixture
+def test_df():
+    return [{'id': '650703', 'state': 'EXECUTED', 'date': '2023-09-05T11:30:32Z', 'amount': '16210', 'currency_name': 'Sol', 'currency_code': 'PEN', 'from': 'РЎС‡РµС‚ 58803664561298323391', 'to': 'РЎС‡РµС‚ 39745660563456619397', 'description': 'РџРµСЂРµРІРѕРґ РѕСЂРіР°РЅРёР·Р°С†РёРё'
+}]
+
+@pytest.fixture
+def excel_test():
+    return [{'id': 650703.0, 'state': 'EXECUTED', 'date': '2023-09-05T11:30:32Z', 'amount': 16210.0, 'currency_name': 'Sol', 'currency_code': 'PEN', 'from': 'Счет 58803664561298323391', 'to': 'Счет 39745660563456619397', 'description': 'Перевод организации'}]

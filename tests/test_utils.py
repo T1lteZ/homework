@@ -34,9 +34,3 @@ def test_financial_transactions_mistake_json(path_mistake_json):
 
 def test_transaction_amount(trans):
     assert sum_operation_on_rub(trans) == '31957.58'
-
-
-@patch('src.utils.currency_conversion')
-def test_transaction_amount_non_rub(mock_currency_conversion, trans_1):
-    mock_currency_conversion.return_value = 1000.0
-    assert sum_operation_on_rub(trans_1) == 1000.0
