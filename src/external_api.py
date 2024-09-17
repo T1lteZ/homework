@@ -34,4 +34,4 @@ def conversion_api(transaction: Any) -> Any:
     return result["result"]
 
 
-print(type(conversion_api(transaction)))
+

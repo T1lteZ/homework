@@ -3,10 +3,12 @@ from tests.conftest import transactions
 
 def filter_by_currency(transactions: list[dict], currency="USD") -> list[dict]:
     """Фильтр списка словарей транзакций"""
+    trans_list = []
     if len(transactions) > 0:
         for transactions in transactions:
-            if transactions["operationAmount"]["currency"]["name"] == currency:
-                yield transactions
+            if transactions.get("name") == currency:
+                trans_list.append(transactions)
+                return trans_list
             else:
                 continue
     elif len(transactions) == 0:

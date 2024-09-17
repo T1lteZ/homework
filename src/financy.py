@@ -37,9 +37,6 @@ def csv_reader_func(path) -> Any:
         return []
 
 
-print(csv_reader_func("C:/Users/stasf/PycharmProjects/homework/financy.csv"))
-
-
 def xlsx_reader_func(path) -> Any:
     """Функция чтения excel"""
     try:
@@ -50,6 +47,3 @@ def xlsx_reader_func(path) -> Any:
     except FileNotFoundError:
         logger.info("Файл не найден")
         return []
-
-
-print(xlsx_reader_func("C:/Users/stasf/PycharmProjects/homework/transactions_excel.xlsx"))

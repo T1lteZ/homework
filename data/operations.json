@@ -21,7 +21,7 @@
     "operationAmount": {
       "amount": "8221.37",
       "currency": {
-        "name": "USD",
+        "": "USD",
         "code": "USD"
       }
     },
