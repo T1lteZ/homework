@@ -32,6 +32,3 @@ def conversion_api(transaction: Any) -> Any:
     response = requests.get(url, headers={"apikey": values}, data=payload)
     result = response.json()
     return result["result"]
-
-
-

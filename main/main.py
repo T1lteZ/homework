@@ -1,14 +1,13 @@
 import os
 import sys
-sys.path.append(os.getcwd())
-
 from src.widget import get_date, mask_account_card
 from src.bank_operations import search_bank_operation
 from src.generators import filter_by_currency
-from src.mask import get_mask_account, get_mask_card_number
 from src.processing import filter_by_state, sort_by_date
 from src.financy import csv_reader_func, xlsx_reader_func
 from src.utils import operation_list
+
+sys.path.append(os.getcwd())
 
 PATH_TO_FILE_JSON = os.path.join(os.path.dirname(os.path.dirname(__file__)), "data", "operations.json")
 PATH_TO_FILE_CSV = "C:/Users/stasf/PycharmProjects/homework/financy.csv"
@@ -113,5 +112,3 @@ def main_menu():
                 else:
                     print(f"{date} {description}\n{from_} -> {to_}\nСумма: {amount} {currency}\n")
         break
-
-main_menu()

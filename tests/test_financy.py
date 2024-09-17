@@ -17,6 +17,7 @@ def test_read_csv(mock_read, test_df):
 def test_csv_none():
     assert csv_reader_func("") == []
 
+
 @patch("src.financy.pd.read_excel")
 def test_read_excel(mock_read, excel_test):
     mock_read.return_value = excel_test
