@@ -3,7 +3,6 @@ from tests.conftest import transactions
 
 def filter_by_currency(transactions: list[dict], currency="RUB") -> list[dict]:
     """Фильтр списка словарей транзакций"""
-    else_trans = []
     trans_list = []
     if len(transactions) > 0:
         for transactions in transactions:
