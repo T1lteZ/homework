@@ -1,14 +1,17 @@
 from tests.conftest import transactions
 
 
-def filter_by_currency(transactions: list[dict], currency="USD") -> list[dict]:
+def filter_by_currency(transactions: list[dict], currency="RUB") -> list[dict]:
     """Фильтр списка словарей транзакций"""
+    else_trans = []
+    trans_list = []
     if len(transactions) > 0:
         for transactions in transactions:
-            if transactions["operationAmount"]["currency"]["name"] == currency:
-                yield transactions
+            if transactions["operationAmount"]["currency"]["code"] == currency:
+                return transactions
             else:
                 continue
+        return trans_list
     elif len(transactions) == 0:
         try:
             yield "Нет транзакций"
