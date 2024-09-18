@@ -2,8 +2,7 @@ from functools import wraps
 
 
 def log(filename):
-    """декоратор для записи вызова функции в консоль или в mylog"""
-
+    """ декоратор для записи вызова функции в консоль или в mylog"""
     def decorator(func):
         @wraps(func)
         def wrapper(*args, **kwargs):
@@ -21,9 +20,7 @@ def log(filename):
                 else:
                     print(f"my_function error: {e}. Inputs {args}, {kwargs}")
             return result
-
         return wrapper
-
     return decorator
 
 
